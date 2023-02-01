@@ -20,7 +20,7 @@ This Project is designed using HTML, CSS & JavaScript. [Live Link](https://joygo
 
 ### PC View
 
-![App Screenshot](https://github.com/JoyGoswami/third-assessment/blob/main/assets/full-screenshot/pcss.png?raw=true)
+![App Screenshot](https://github.com/JoyGoswami/note-taking-app/blob/main/assets/images/Computer_SS.png?raw=true)
 
 ### Mobile View
 
