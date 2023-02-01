@@ -24,4 +24,4 @@ This Project is designed using HTML, CSS & JavaScript. [Live Link](https://joygo
 
 ### Mobile View
 
-![App Screenshot](https://github.com/JoyGoswami/third-assessment/blob/main/assets/full-screenshot/mobiless.png?raw=true)
+![App Screenshot](https://github.com/JoyGoswami/note-taking-app/blob/main/assets/images/Mobile_ss.jpg?raw=true)
