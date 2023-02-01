@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Note</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/91530a17e8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="container">
+      <div class="form-container">
+        <form class="form" action="">
+          <input
+            class="note-input"
+            type="text"
+            name="note-input"
+            id="note-input"
+            placeholder="Take a note..."
+          />
+          <div class="expend-form">
+            <input
+              class="title"
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+            />
+            <textarea
+              class="description"
+              name="description"
+              id="description"
+              placeholder="Take a note"
+            ></textarea>
+            <div class="close-btn">
+              <input class="clse-btn" type="submit" value="Close" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="note-container">
+        <!-- <div class="note">
+          <h3 class="title-label">This is a title</h3>
+          <p class="description-label">
+            This is description. this should not exceed three line. This is
+            description. this should not exceed three line. This is description.
+            this should not exceed three line
+          </p>
+          <div class="overlap">
+            <i class="more-btn fa-solid fa-ellipsis-vertical"></i>
+          </div>
+          <div class="overlap-more">
+            <p>Delete note</p>
+          </div>
+        </div> -->
+        <!-- <div class="note"></div>
+        <div class="note"></div>
+        <div class="note"></div>
+        <div class="note"></div> -->
+      </div>
+    </section>
+    <section class="overlay-note-container">
+      <form action="">
+        <input type="hidden" name="index" class="overlay-hidden-in" />
+        <input
+          class="overlay-title"
+          type="text"
+          name="overlay-title"
+          id="overlay-title"
+          placeholder="Title"
+        />
+        <textarea
+          class="overlay-description"
+          name="overlay-description"
+          id="overlay-description"
+          placeholder="Take a note"
+        ></textarea>
+        <div class="overlay-close-btn">
+          <input class="overlay-cls-btn" type="submit" value="Close" />
+        </div>
+      </form>
+    </section>
+    <div class="overlay-shadow"></div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

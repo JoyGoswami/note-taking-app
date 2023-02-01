@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #202124;
+  --border-color: #5f6368;
+  --font-color: #b3bdbe;
+
+  --font: "Roboto", sans-serif;
+}
+
+/* Global styling */
+body {
+  background-color: var(--primary-color);
+  font-family: var(--font);
+  height: 100%;
+  width: 100%;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Global styling */
+/* form */
+.form {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.form .note-input {
+  height: 45px;
+  width: 596px;
+  border: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 1rem;
+  caret-color: var(--font-color);
+}
+::placeholder {
+  color: var(--font-color);
+  letter-spacing: 0.5px;
+}
+.expend-form,
+.overlay-note-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 596px;
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.expend-form.display,
+.overlay-note-container.display {
+  display: flex;
+}
+.expend-form input,
+.expend-form textarea,
+.overlay-note-container input,
+.overlay-note-container textarea {
+  width: 100%;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding-left: 1rem;
+  caret-color: var(--font-color);
+  color: var(--font-color);
+  resize: none;
+}
+.expend-form textarea,
+.overlay-note-container textarea {
+  padding: 0.8rem;
+}
+.expend-form textarea {
+  max-height: calc(100vh - 200px);
+}
+.expend-form textarea::-webkit-scrollbar {
+  width: 0px;
+}
+.expend-form .close-btn,
+.overlay-note-container .overlay-close-btn {
+  width: 100%;
+  text-align: end;
+  padding-right: 2rem;
+}
+.expend-form .close-btn input,
+.overlay-note-container .overlay-close-btn input {
+  width: 80px;
+  background-color: transparent;
+  color: var(--font-color);
+  cursor: pointer;
+  padding-left: 0;
+}
+.overlay-note-container textarea::-webkit-scrollbar {
+  width: 0px;
+}
+/* form */
+/* note container */
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+/* note */
+.note {
+  height: 170px;
+  width: 236px;
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  padding: 1rem 1rem 2rem 1rem;
+  position: relative;
+}
+.note h3 {
+  color: var(--font-color);
+}
+.note p {
+  margin-top: 1rem;
+  color: var(--font-color);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.overlap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-end-end-radius: 7px;
+  border-end-start-radius: 7px;
+  width: 100%;
+  height: 37px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.overlap i {
+  display: block;
+  color: var(--font-color);
+  display: none;
+  padding: 7px 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+}
+.note:hover i {
+  display: block;
+}
+.overlap i:hover {
+  background-color: #303236;
+}
+.overlap-more {
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 150px;
+  height: 100px;
+  padding-top: 0.5rem;
+  box-shadow: 1px 1px 15px 0px black;
+  bottom: -57%;
+  right: -43%;
+  z-index: 1;
+  display: none;
+}
+.overlap-more.show {
+  display: block;
+}
+.overlap-more p {
+  margin-top: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.overlap-more p:hover {
+  background-color: var(--border-color);
+}
+/* note */
+/* note container */
+/* over lay not container */
+.overlay-note-container {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  z-index: 99;
+}
+.overlay-note-container textarea {
+  padding: 0.8rem;
+  max-height: calc(100vh - 300px);
+}
+.overlay-shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: 98;
+  display: none;
+}
+/* over lay not container */
+
+/* responsive */
+@media (max-width: 548px) {
+  .note {
+    width: 50%;
+  }
+}
+/* responsive */
