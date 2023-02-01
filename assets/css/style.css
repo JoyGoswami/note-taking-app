@@ -219,7 +219,10 @@ body {
 /* responsive */
 @media (max-width: 548px) {
   .note {
-    width: 50%;
+    width: 48%;
+  }
+  .overlay-note-container {
+    width: 86%;
   }
 }
 /* responsive */
